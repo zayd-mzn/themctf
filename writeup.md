@@ -1,4 +1,4 @@
-# Some Play's Libretto — MISC 100pts
+# Some Play's Libretto — MISC
 
 **Flag:** `THEM?!CTF{5h4k35p34r3_fr0m_73mu8r0_m19h7_4c7u4lly_83_5h4k35p34r3}`
 
@@ -145,27 +145,3 @@ shakespeare from temubro might actually be shakespeare
 ```
 THEM?!CTF{5h4k35p34r3_fr0m_73mu8r0_m19h7_4c7u4lly_83_5h4k35p34r3}
 ```
-
----
-
-## Solution Script
-
-See `solve.py` — a fully automated solver that:
-
-1. Brute-forces the Caesar shift (or applies shift 20 directly)
-2. Parses and executes the SPL play
-3. Applies leetspeak substitution and outputs the flag
-
-```bash
-$ python3 solve.py
-Decoded play message : shakespeare from temubro might actually be shakespeare
-Flag                 : THEM?!CTF{5h4k35p34r3_fr0m_73mu8r0_m19h7_4c7u4lly_83_5h4k35p34r3}
-```
-
----
-
-## Key Takeaways
-
-- **Layered encodings** — always check for classical ciphers first when text looks garbled but retains structure (spaces, punctuation patterns, capitalisation of what look like proper nouns).
-- **Esoteric languages** — the title *"Arithmetic Tragedy"* + character names Romeo & Juliet + scenes with nouns/adjectives doing math are the giveaways for SPL. Recognising the esolang saves hours of manual reverse-engineering.
-- **SPL noun arithmetic** — the adjective-doubling rule means value grows exponentially: 6 adjectives on a noun = noun × 2⁶ = ±64, which conveniently covers the ASCII printable range.
