@@ -1,10 +1,4 @@
 #!/usr/bin/env python3
-"""
-CTF Challenge: Some Play's Libretto
-Category: MISC | Points: 100
-Solve script - full automated solution
-"""
-
 import re
 
 # ─── Step 1: Caesar cipher decode (shift 20) ──────────────────────────────────
